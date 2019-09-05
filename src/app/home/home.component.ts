@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataStoreService } from "../shared/services/data-store.service";
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: DataStoreService) { }
+
+  rating: number;
+
 
   ngOnInit() {
+    this.store.getRating().subscribe(rating => {
+      this.rating = rating;
+    });
   }
 
 }
