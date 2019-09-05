@@ -13,6 +13,14 @@ export class SidenavComponent implements OnInit {
     {
       title: 'Home',
       path: 'home'
+    },
+    {
+      title: 'Dashboard',
+      path: ''
+    },
+    {
+      title: 'Top 100',
+      path: ''
     }
   ];
 
